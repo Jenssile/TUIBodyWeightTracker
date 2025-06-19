@@ -1,0 +1,7 @@
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+csv = "1.2"
+chrono = { version = "0.4", features = ["serde"] }
+ratatui = "0.26"
+crossterm = "0.27"
+serde = { version = "1.0", features = ["derive"] }
