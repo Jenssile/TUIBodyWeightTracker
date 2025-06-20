@@ -1,0 +1,20 @@
+[package]
+name = "weight-tracker"
+version = "0.1.0"
+edition = "2024"
+authors = ["Jens Bouwens jens.e.bouwens@gmail.com"]
+description = "Terminal-based body weight tracker with TUI and CSV persistence"
+license = "MIT"
+repository = "https://github.com/yourusername/TUIBodyWeightTracker"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+csv = "1"
+chrono = { version = "0.4", features = ["serde"] }
+ratatui = "0.23"
+crossterm = "0.27"
+serde = { version = "1", features = ["derive"] }
+
+[[bin]]
+name = "weight-tracker"
+path = "main.rs"

@@ -26,7 +26,7 @@ pub fn read_entries() -> Result<Vec<Entry>, Box<dyn Error>> {
 pub fn write_entry(weight: f32) -> Result<(), Box<dyn Error>> {
     let today = chrono::Local::now().date_naive();
 
-    let mut entries = read_entries()?;
+    let entries = read_entries()?;
     if entries.iter().any(|e| e.date == today) {
         println!("Entry for today already exists.");
         return Ok(());
